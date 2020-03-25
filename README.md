@@ -2,6 +2,10 @@
 
 Used to initialize the inpage ethereum provider injected by MetaMask.
 
+## Installation
+
+`yarn add metamask-inpage-provider`
+
 ## Usage
 
 ```javascript
