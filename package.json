@@ -1,16 +1,18 @@
 {
-  "name": "metamask-inpage-provider",
-  "version": "2.0.1",
-  "description": "An ethereum provider that connects over a WebExtension port.",
+  "name": "@metamask/inpage-provider",
+  "version": "5.2.1",
+  "description": "A JavaScript Ethereum provider that connects over a WebExtension port.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/*",
+    "lint": "eslint . --ext js,json",
+    "lint:fix": "eslint . --ext js,json --fix"
   },
-  "author": "",
+  "author": "MetaMask",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/MetaMask/metamask-inpage-provider.git"
+    "url": "git+ssh://git@github.com/MetaMask/inpage-provider.git"
   },
   "keywords": [
     "MetaMask",
@@ -18,19 +20,28 @@
     "Provider"
   ],
   "bugs": {
-    "url": "https://github.com/MetaMask/metamask-inpage-provider/issues"
+    "url": "https://github.com/MetaMask/inpage-provider/issues"
   },
-  "homepage": "https://github.com/MetaMask/metamask-inpage-provider#readme",
+  "homepage": "https://github.com/MetaMask/inpage-provider#readme",
+  "files": [
+    "src/"
+  ],
   "dependencies": {
-    "json-rpc-engine": "^5.0.0",
+    "eth-json-rpc-errors": "^2.0.2",
+    "fast-deep-equal": "^2.0.1",
+    "json-rpc-engine": "^5.1.5",
     "json-rpc-middleware-stream": "^2.1.1",
     "loglevel": "^1.6.1",
     "obj-multiplex": "^1.0.0",
-    "obs-store": "^4.0.1",
+    "obs-store": "^4.0.3",
     "pump": "^3.0.0",
     "safe-event-emitter": "^1.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.3.4"
+    "@metamask/eslint-config": "^2.1.1",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-json": "^2.0.1",
+    "tape": "^4.11.0"
   }
 }
